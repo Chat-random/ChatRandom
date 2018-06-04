@@ -1,10 +1,10 @@
-package com.chat.app.authorisation.controller;
-import com.chat.app.authorisation.entity.User;
-import com.chat.app.authorisation.repository.AuthorisationRepository;
-import com.chat.app.authorisation.request.LoginRequest;
-import com.chat.app.authorisation.request.RegistrationRequest;
-import com.chat.app.authorisation.response.LoginResponse;
-import com.chat.app.authorisation.response.RegistrationResponse;
+package com.chat.authorisation.controller;
+import com.chat.authorisation.entity.User;
+import com.chat.authorisation.repository.AuthorisationRepository;
+import com.chat.authorisation.request.LoginRequest;
+import com.chat.authorisation.request.RegistrationRequest;
+import com.chat.authorisation.response.LoginResponse;
+import com.chat.authorisation.response.RegistrationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

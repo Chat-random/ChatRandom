@@ -1,7 +1,7 @@
-package com.chat.app.authorisation.repository;
+package com.chat.authorisation.repository;
 
 //import org.apache.catalina.User;
-import com.chat.app.authorisation.entity.User;
+import com.chat.authorisation.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 

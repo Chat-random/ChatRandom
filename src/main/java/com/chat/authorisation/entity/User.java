@@ -1,4 +1,4 @@
-package com.chat.app.authorisation.entity;
+package com.chat.authorisation.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 

@@ -1,4 +1,4 @@
-package com.chat.app.authorisation.request;
+package com.chat.authorisation.request;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
