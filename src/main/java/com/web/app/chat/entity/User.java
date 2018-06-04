@@ -1,28 +1,37 @@
-package com.chat.authorisation.entity;
+package com.web.app.chat.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.UUID;
 
+
 @Entity
 @Table(name = "user")
 public class User {
-    private int age;
     private UUID id;
-    private String name;
-    private String country;
-    private String surname;
     private String login;
     private String password;
-    private String city;
     private String email;
+    private String name;
+    private String surname;
+    private int age;
+    private String country;
+    private String city;
 
 
-    public User(String login, String password, String email) {
+    public User(String login, String password, String name, String surname, String email, int age, String country, String city) {
         this.login = login;
         this.password = password;
         this.email = email;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+
     }
 
     @Id
@@ -37,6 +46,15 @@ public class User {
         this.id = id;
     }
 
+    @Column(name = "login")
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     @Column(name = "password")
     public String getPassword() {
         return password;
@@ -46,13 +64,22 @@ public class User {
         this.password = password;
     }
 
-    @Column(name = "login")
-    public String getLogin() {
-        return login;
+    @Column(name = "email")
+    public String getEmail() {
+        return email;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Column(name = "name")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(name = "surname")
@@ -64,19 +91,13 @@ public class User {
         this.surname = surname;
     }
 
-    @Column(name = "name")
-    public String getName() { return name;
+    @Column(name = "age")
+    public int getAge() {
+        return age;
     }
 
-    public void setName(String name) { this.name = name; }
-
-    @Column(name = "email")
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Column(name = "country")
@@ -97,12 +118,4 @@ public class User {
         this.city = city;
     }
 
-    @Column(name = "age")
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

@@ -1,15 +1,14 @@
-package com.chat.authorisation.controller;
-import com.chat.authorisation.entity.User;
-import com.chat.authorisation.repository.AuthorisationRepository;
-import com.chat.authorisation.request.LoginRequest;
-import com.chat.authorisation.request.RegistrationRequest;
-import com.chat.authorisation.response.LoginResponse;
-import com.chat.authorisation.response.RegistrationResponse;
+package com.web.app.chat.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import com.web.app.chat.entity.User;
+import com.web.app.chat.repository.AuthorisationRepository;
+import com.web.app.chat.request.LoginRequest;
+import com.web.app.chat.request.RegistrationRequest;
+import com.web.app.chat.response.LoginResponse;
+import com.web.app.chat.response.RegistrationResponse;
 
 
 @Controller
@@ -41,7 +40,7 @@ public class AuthorisationController {
         User userByEmail = authorisationRepository.findByEmail(request.getEmail());
         User userByLogin = authorisationRepository.findByLogin(request.getLogin());
         if (userByEmail == null && userByLogin == null) {
-            User newUser = new User(request.getLogin(), request.getPassword(), request.getEmail());
+            User newUser = new User(request.getLogin(), request.getPassword(), request.getEmail(), request.getName(), request.getSurname(), request.getAge(), request.getCountry(), request.getCity());
             authorisationRepository.save(newUser);
             response.setSuccessful(true);
         } else {

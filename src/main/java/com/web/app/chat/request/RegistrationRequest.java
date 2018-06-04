@@ -1,4 +1,4 @@
-package com.chat.authorisation.request;
+package com.web.app.chat.request;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,8 +14,8 @@ public class RegistrationRequest {
     private String password;
     private String email;
     private String name;
-    private String surname;
-    private int age;
     private String city;
+    private int age;
+    private String surname;
     private String country;
 }

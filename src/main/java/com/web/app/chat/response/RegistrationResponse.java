@@ -1,4 +1,4 @@
-package com.chat.authorisation.request;
+package com.web.app.chat.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class LoginRequest {
-    private String password;
-    private String login;
+public class RegistrationResponse {
+    private boolean isSuccessful;
 }

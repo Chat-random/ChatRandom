@@ -1,4 +1,4 @@
-package com.chat.authorisation.response;
+package com.web.app.chat.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

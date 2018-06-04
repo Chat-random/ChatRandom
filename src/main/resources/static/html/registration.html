@@ -5,7 +5,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>На Бутылке</title>
+    <title>Chat</title>
     <script src="../js/jquery-1.11.1.js"></script>
     <script src="../js/validation.js"></script>
 </head>
@@ -18,35 +18,34 @@
 <center>
     <br/>
     <p>
-        <input type="text" id="log_reg" placeholder="Логин" required/>
+        <input id="log_reg" type="text" placeholder="Логин" required/>
     <p/>
     <p>
         <input type="password" id="pass_reg" placeholder="Пароль" required/>
     </p>
     <p>
-        <input type="text" id="mail_reg"  placeholder="Email" required/>
+        <input id="mail_reg" type="text" placeholder="Email" required/>
     </p>
     <p>
-        <input type="text" id="name_reg" placeholder="Имя" required/>
+        <input id="log_name" type="text" placeholder="Имя" required/>
     <p/>
     <p>
-        <input type="text" id="surname_reg" placeholder="Фамилия" required/>
+        <input id="log_surname" type="text" placeholder="Фамилия" required/>
     <p/>
     <p>
-        <input type="text" id="age_reg" placeholder="Возраст" required/>
+        <input id="log_age" type="text" placeholder="Возраст" required/>
     <p/>
     <p>
-        <input type="text" id="city_reg" placeholder="Город" required/>
+        <input id="log_country" type="text" placeholder="Страна" required/>
     <p/>
     <p>
-        <input type="text" id="country_reg" placeholder="Страна" required/>
+        <input id="log_city" type="text" placeholder="Город" required/>
     <p/>
-
 
     <p>
         <input type="button" onclick="validation()" value="Зарегистрироваться"/>
     </p>
-    <p class="text1">Есть аккаунт? <a href="authorization.html">Войти</a></p>
+    <p class="text1">Уже зарегестрированы?<a href="authorization.html">Войти</a></p>
     <script>langValidation()</script>
 </center>
 </div>
