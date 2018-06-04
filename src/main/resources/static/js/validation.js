@@ -23,6 +23,9 @@ function validation() {
     var log = doc.getElementById("log_reg").value;
     var email = doc.getElementById("mail_reg").value;
     var pass = doc.getElementById("pass_reg").value;
+    var name = doc.getElementById("log_name").value;
+    var surname = doc.getElementById("log_surname").value;
+    var age = doc.getElementById("log_age").value;
     if (log.length > 4) {
         if (email.length > 0) {
             var at = email.indexOf("@");
@@ -43,4 +46,17 @@ function validation() {
     } else {
         alert('Логин должен быть не менее 5 символов');
     }
+    if (name.length == 0) {
+        alert('Поля "Имя" не должно быть пустым');
+        return;
+    }
+    if (surname.length ==0) {
+        alert('Поле "Фамилия" не должно быть пустым')
+        return;
+    }
+    if (age.length == 0) {
+        alert('Люди должны знать сколько тебе лет!')
+        return;
+    }
+
 }
