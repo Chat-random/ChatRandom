@@ -54,9 +54,16 @@ function validation() {
         alert('Поле "Фамилия" не должно быть пустым')
         return;
     }
-    if (age.length == 0) {
+    if (age == 0) {
         alert('Люди должны знать сколько тебе лет!')
         return;
     }
+    if (age < 16 ) {
+        alert('Ваш возраст слишком мал для этого чата!')
+        alert('Error!')
+        location.reload(true);
+
+    }
+
 
 }
